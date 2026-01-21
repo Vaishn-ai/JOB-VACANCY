@@ -1,0 +1,167 @@
+<nav class="navbar">
+  <div class="nav-container">
+
+    <a href="/" class="logo">JobPortal</a>
+
+    <ul class="nav-links">
+      <li><a href="{% url 'home_url' %}" class="active">Home</a></li>
+
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'create_url' %}">Create Job</a></li>
+
+        {% if user.is_superuser %}
+        <li><a href="{% url 'show_url' %}">About</a></li>
+        {% endif%}
+
+        <li><a href="{% url 'logout_url' %}" class="btn-logout">Logout</a></li>
+
+        <li class="nav-item">
+            {% if user.is_superuser %}
+            <h5><span style="color: brown;">{{ user.username }}</span></h5>
+            {% else %}
+            <h5><span style="color: chartreuse;">{{ user.username }}</span></h5>
+            {% endif %}
+        </li>
+      {% else %}
+
+    </ul>
+
+    <div class="nav-buttons">
+      <a href="{% url 'login_url' %}" class="btn-login">Login</a>
+      <a href="{% url 'register_url' %}" class="btn-register">Register</a>
+    </div>
+
+    {% endif %}
+
+  </div>
+</nav>
+
+
+<style>
+    /* ✅ NAVBAR STYLING */
+.navbar {
+  background: #111;
+  padding: 14px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* ✅ Logo */
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* ✅ Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ Navbar anchor */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  opacity: 0.85;
+  transition: 0.3s;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ✅ Active page */
+.nav-links a.active {
+  opacity: 1;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ✅ Logout button */
+.btn-logout {
+  background: transparent;
+  color: white !important;
+  border: 1px solid white;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  background: white;
+  color: black !important;
+}
+
+/* ✅ Right side buttons (Login/Register) */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-login,
+.btn-register {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* ✅ Login button */
+.btn-login {
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-login:hover {
+  background: white;
+  color: black;
+}
+
+/* ✅ Register button */
+.btn-register {
+  background: white;
+  color: black;
+}
+
+.btn-register:hover {
+  opacity: 0.9;
+}
+
+/* ✅ username (inside li.nav-item) */
+.nav-item h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+</style>
