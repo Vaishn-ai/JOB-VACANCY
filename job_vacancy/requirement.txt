@@ -1,1 +1,6 @@
 pip freeze > requirements.txt
+
+Django
+gunicorn
+whitenoise
+psycopg2-binary   # only if using PostgreSQL
