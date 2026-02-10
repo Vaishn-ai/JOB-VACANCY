@@ -78,13 +78,11 @@ WSGI_APPLICATION = 'job_vacancy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'job_db',
-        'USER' : 'root',
-        'PASSWORD' : 'v12avi.81',
-        'HOST' : 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
