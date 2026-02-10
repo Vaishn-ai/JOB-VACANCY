@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Job Vacancy Form</title>
+{% endblock %}
+
+{% block content %}
+<div class="job-form-page">
+
+  <div class="job-form-card">
+    <h1 class="job-form-title">Job Vacancy Form</h1>
+    <p class="job-form-subtitle">Fill the details below to post a new job ✅</p>
+
+    <form method="post" class="job-form">
+      {% csrf_token %}
+
+      <div class="job-form-fields">
+        {{ form.as_p }}
+      </div>
+
+      <div class="job-form-buttons">
+        <button type="submit" class="btn-submit">Submit</button>
+        <button type="reset" class="btn-reset">Reset</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<style>
+    /* ✅ Job Vacancy Form Page */
+.job-form-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 15px;
+  background: #f5f6fa;
+}
+
+.job-form-card {
+  width: 700px;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.job-form-title {
+  font-size: 34px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.job-form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* ✅ Form fields */
+.job-form-fields p {
+  margin-bottom: 14px;
+}
+
+.job-form-fields label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.job-form-fields input,
+.job-form-fields select,
+.job-form-fields textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.job-form-fields textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.job-form-fields input:focus,
+.job-form-fields select:focus,
+.job-form-fields textarea:focus {
+  border-color: black;
+}
+
+/* ✅ Buttons */
+.job-form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn-submit {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+.btn-reset {
+  flex: 1;
+  padding: 11px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: transparent;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-reset:hover {
+  background: black;
+  color: white;
+}
+
+</style>
+{% endblock %}

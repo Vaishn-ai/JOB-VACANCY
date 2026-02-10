@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Document</title>
+    {% endblock %}
+</head>
+<body>
+
+    {% include 'NavBar.html' %}
+
+    <main class="main-content" style="min-height: 100vh;">
+      {% block content %}
+
+      {% endblock %}
+    </main>
+    
+    {% include 'FootBar.html' %}
+</body>
+</html>
