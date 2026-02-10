@@ -1,10 +1,10 @@
-from .views import create_job, show_job, update_job, delete_job, info_job, home
+from .views import create_job, show_job, update_job, delete_job, info_job, home, About, Contact
 from django.urls import path
-
-
 
 urlpatterns = [
     path('', home, name='home_url'),
+    path('a/', About, name='about_url'),
+    path('c/', Contact, name='contact_url'),
     path('create/', create_job, name='create_url'),
     path('show/', show_job, name='show_url'),
     path('update/<int:pk>/', update_job, name='update_url'),

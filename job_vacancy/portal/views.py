@@ -8,6 +8,15 @@ def home(request):
     template_name = "portal/home.html"
     return render (request, template_name)
 
+
+def About(request):
+    template = "portal/about.html"
+    return render (request, template)
+
+def Contact(request):
+    template = "portal/contact.html"
+    return render (request, template)
+
 def create_job(request):
     form = JobForm()
     if request.method=='POST':
@@ -21,8 +30,26 @@ def create_job(request):
 
 def show_job(request):
 
-    #by job type, location, salary range, date posted
     jobs = Job.objects.all()
+    job = request.GET.get('job_type')
+    location = request.GET.get('location')
+    date_posted = request.GET.get('posted_date')
+    salary = request.GET.get('salary_range')
+    
+    sort = request.GET.get('sort')
+
+    if job:
+        jobs = jobs.filter(job_type__icontains = job)
+    if location:
+        jobs = jobs.filter(location__icontains = location)
+    if salary:
+        jobs = jobs.filter(salary_range__icontains = salary)
+    if date_posted:
+        jobs = jobs.filter(posted_date = date_posted)
+    if sort :
+        jobs = jobs.order_by(sort)
+
+
     context = {'jobs' : jobs}
     template_name = 'portal/show.html'
     return render (request, template_name, context)

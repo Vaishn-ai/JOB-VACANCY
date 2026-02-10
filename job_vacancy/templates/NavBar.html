@@ -5,12 +5,14 @@
 
     <ul class="nav-links">
       <li><a href="{% url 'home_url' %}" class="active">Home</a></li>
+      <li><a href="{% url 'about_url' %}" class="active">About</a></li>
+      <li><a href="{% url 'contact_url' %}" class="active">Conatct US</a></li>
 
       {% if user.is_authenticated %}
       <li><a href="{% url 'create_url' %}">Create Job</a></li>
 
         {% if user.is_superuser %}
-        <li><a href="{% url 'show_url' %}">About</a></li>
+        <li><a href="{% url 'show_url' %}">vacancies</a></li>
         {% endif%}
 
         <li><a href="{% url 'logout_url' %}" class="btn-logout">Logout</a></li>
