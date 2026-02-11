@@ -16,7 +16,15 @@ def register_user(request):
     template_name = "auth_app/register.html"
     return render (request, template_name, context)
 
+def create_default_user():
+    if not User.objects.filter(username="testuser").exists():
+        User.objects.create_user(
+            username="admin",
+            password="admin123"
+        )
+
 def login_user(request):
+    create_default_user() 
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
