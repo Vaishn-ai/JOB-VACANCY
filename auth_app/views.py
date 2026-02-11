@@ -24,12 +24,21 @@ def create_default_user():
         )
 
 def login_user(request):
-    create_default_user() 
+
+    try:
+        if not User.objects.filter(username="testuser").exists():
+            User.objects.create_user(
+                username="admin",
+                password="admin123"
+            )
+    except:
+        pass
+ 
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
-        if user:
+        if user is not None:
             login(request, user)
             return redirect ('home_url')
         else:
