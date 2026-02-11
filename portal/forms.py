@@ -1,4 +1,4 @@
-from .models import Job
+from .models import Job, ContactMessage
 from django import forms
 
 class JobForm(forms.ModelForm):
@@ -13,4 +13,11 @@ class JobForm(forms.ModelForm):
         }
 
 
+from django import forms
+from .models import ContactMessage
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = ContactMessage
+        fields = ['full_name', 'email', 'subject', 'message']
 

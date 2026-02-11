@@ -4,15 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Footbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_app/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_app/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Portal/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Portal/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Portal/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Portal/form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Portal/info.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Portal/show.css' %}">
+
+
     {% block title %}
     <title>Document</title>
     {% endblock %}
 </head>
-<body>
+<body class=" page-wrapper">
 
     {% include 'NavBar.html' %}
 
-    <main class="main-content" style="min-height: 100vh;">
+    <main class="main-content">
       {% block content %}
 
       {% endblock %}

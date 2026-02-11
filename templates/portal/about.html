@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block title %}
-<title>
-    About us
-</title>
+<title>About Us</title>
 {% endblock %}
 
 {% block content %}
+
 <section class="about-section">
     <div class="container">
+
         <h1>About Our Job Portal</h1>
 
         <p class="lead">
@@ -40,202 +40,8 @@
             <li>Secure employer and candidate profiles</li>
             <li>Fast and transparent hiring workflow</li>
         </ul>
+
     </div>
 </section>
 
-<style>
-    /* =========================
-   Global Layout
-   ========================= */
-
-body {
-    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-}
-
-/* =========================
-   Sections
-   ========================= */
-
-.about-section,
-.contact-section {
-    background-color: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin-top: 2rem;
-    padding: 2.5rem;
-}
-
-/* =========================
-   Headings & Text
-   ========================= */
-
-h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    color: #0d6efd; /* primary blue */
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    color: #212529;
-}
-
-h3 {
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-.lead {
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: #495057;
-}
-
-/* =========================
-   Lists
-   ========================= */
-
-ul {
-    padding-left: 1.25rem;
-    margin-bottom: 1.5rem;
-}
-
-ul li {
-    margin-bottom: 0.5rem;
-}
-
-/* =========================
-   Forms
-   ========================= */
-
-form {
-    margin-top: 1.5rem;
-}
-
-.form-group {
-    margin-bottom: 1.25rem;
-}
-
-label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 0.6rem 0.75rem;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    background-color: #fff;
-}
-
-textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15);
-}
-
-/* =========================
-   Buttons
-   ========================= */
-
-.btn {
-    display: inline-block;
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.2s ease;
-}
-
-.btn-primary {
-    background-color: #0d6efd;
-    color: #ffffff;
-}
-
-.btn-primary:hover {
-    background-color: #0b5ed7;
-}
-
-/* =========================
-   Alerts (Django messages)
-   ========================= */
-
-.alert {
-    padding: 0.75rem 1rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-}
-
-.alert-success {
-    background-color: #d1e7dd;
-    color: #0f5132;
-}
-
-.alert-error,
-.alert-danger {
-    background-color: #f8d7da;
-    color: #842029;
-}
-
-/* =========================
-   Contact Info Box
-   ========================= */
-
-.contact-info {
-    background-color: #f1f3f5;
-    border-radius: 4px;
-    padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-.contact-info p {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-}
-
-/* =========================
-   Responsive Design
-   ========================= */
-
-@media (max-width: 768px) {
-    .about-section,
-    .contact-section {
-        padding: 1.5rem;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-}
-
-</style>
 {% endblock %}

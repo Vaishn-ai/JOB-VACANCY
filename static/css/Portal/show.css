@@ -1,0 +1,137 @@
+/* ===== JOB FILTER BAR ===== */
+
+.job-filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1100px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.filter-input,
+.sort-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 150px;
+}
+
+.filter-btn {
+    padding: 10px 16px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== JOB TABLE PAGE ===== */
+
+.show-page {
+  min-height: 80vh;
+  padding: 40px 15px;
+  background: #f5f6fa;
+  display: flex;
+  justify-content: center;
+}
+
+.show-card {
+  width: 100%;
+  max-width: 1100px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.show-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.show-header h1 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.show-header p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Table */
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.job-table thead {
+  background: #111;
+  color: white;
+}
+
+.job-table th,
+.job-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.job-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+/* Buttons */
+
+.btn-action {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.btn-info { color: #007bff; border: 1px solid #007bff; }
+.btn-update { color: #28a745; border: 1px solid #28a745; }
+.btn-delete { color: #dc3545; border: 1px solid #dc3545; }
+
+.btn-info:hover { background:#007bff; color:white; }
+.btn-update:hover { background:#28a745; color:white; }
+.btn-delete:hover { background:#dc3545; color:white; }
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .job-filter-form {
+      flex-direction: column;
+  }
+
+  .filter-input,
+  .sort-select,
+  .filter-btn {
+      width: 100%;
+  }
+
+  .show-header {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+}

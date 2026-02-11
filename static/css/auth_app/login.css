@@ -1,0 +1,85 @@
+/* ===== AUTH PAGES (Login/Register) ===== */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 350px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.2);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.btn-auth {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-auth:hover {
+  opacity: 0.9;
+}
+
+.small-text {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.small-text a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 500px) {
+  .auth-form {
+    padding: 18px;
+  }
+
+  .auth-form h2 {
+    font-size: 20px;
+  }
+}

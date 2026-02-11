@@ -1,0 +1,97 @@
+/* ===== REGISTER PAGE ===== */
+
+.auth-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  background: #f5f6fa;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* Django form fields */
+.form-fields p {
+  margin-bottom: 14px;
+}
+
+.form-fields label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-fields input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-fields input:focus {
+  outline: none;
+  border-color: black;
+}
+
+/* Error box */
+.error-box {
+  background: #ffe6e6;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #cc0000;
+}
+
+/* Footer text */
+.auth-footer-text {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.auth-footer-text a {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 500px) {
+
+  .auth-card {
+    padding: 18px;
+  }
+
+  .auth-title {
+    font-size: 20px;
+  }
+
+  .auth-subtitle {
+    font-size: 13px;
+  }
+}

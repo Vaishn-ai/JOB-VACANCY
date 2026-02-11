@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from .models import Job
-from .forms import JobForm
+from .forms import JobForm, ContactForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -14,8 +15,16 @@ def About(request):
     return render (request, template)
 
 def Contact(request):
-    template = "portal/contact.html"
-    return render (request, template)
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your message was successfully saved ✅")
+            return redirect('contact_url')
+    else:
+        form = ContactForm()
+
+    return render(request, "portal/contact.html", {"form": form})
 
 def create_job(request):
     form = JobForm()
