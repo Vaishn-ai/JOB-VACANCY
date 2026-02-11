@@ -1,0 +1,29 @@
+/* CONTACT FORM */
+
+.contact-section {
+    background: white;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.alert-success {
+    background: #d4edda;
+    padding: 12px;
+    border-radius: 6px;
+    color: #155724;
+    margin-bottom: 1rem;
+}

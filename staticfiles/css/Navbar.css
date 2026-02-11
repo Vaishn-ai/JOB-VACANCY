@@ -1,0 +1,125 @@
+/* ===== NAVBAR ===== */
+
+.navbar {
+  background: #111;
+  padding: 14px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  opacity: 0.85;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-links a.active {
+  font-weight: 700;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-login {
+  color: white;
+  border: 1px solid white;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.btn-login:hover {
+  background: white;
+  color: black;
+}
+
+.btn-register {
+  background: white;
+  color: black;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.btn-register:hover {
+  opacity: 0.9;
+}
+
+.btn-logout {
+  border: 1px solid white;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* Username */
+.nav-item h5 {
+  color: #4caf50;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE NAVBAR ===== */
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .btn-login,
+  .btn-register {
+    width: 100%;
+    text-align: center;
+  }
+}

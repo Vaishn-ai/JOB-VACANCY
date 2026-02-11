@@ -1,0 +1,116 @@
+/* ===== JOB INFO PAGE ===== */
+
+.info-page {
+  min-height: 80vh;
+  padding: 40px 15px;
+  background: #f5f6fa;
+  display: flex;
+  justify-content: center;
+}
+
+.info-card {
+  width: 100%;
+  max-width: 850px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.info-header h1 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.info-header p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* Rows */
+
+.info-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #fafafa;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.info-label {
+  font-weight: 700;
+  font-size: 14px;
+  width: 180px;
+}
+
+.info-value {
+  font-size: 14px;
+  flex: 1;
+  text-align: right;
+}
+
+/* Description row */
+
+.desc-row .info-value {
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+/* Buttons */
+
+.info-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-info-action {
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-update { border:1px solid #28a745; color:#28a745; }
+.btn-delete { border:1px solid #dc3545; color:#dc3545; }
+.btn-back { border:1px solid black; color:black; }
+
+.btn-update:hover { background:#28a745; color:white; }
+.btn-delete:hover { background:#dc3545; color:white; }
+.btn-back:hover { background:black; color:white; }
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .info-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .info-label {
+    width: 100%;
+  }
+
+  .info-value {
+    text-align: left;
+  }
+
+  .info-actions {
+    flex-direction: column;
+  }
+
+  .btn-info-action {
+    text-align: center;
+  }
+}
