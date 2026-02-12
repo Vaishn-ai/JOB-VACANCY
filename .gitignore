@@ -5,5 +5,4 @@ __pycache__/
 *.pyd
 
 # Django
-db.sqlite3
 .env
