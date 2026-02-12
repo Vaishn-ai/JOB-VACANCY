@@ -16,6 +16,8 @@ def register_user(request):
     template_name = "auth_app/register.html"
     return render (request, template_name, context)
 
+
+
 def create_default_user():
     if not User.objects.filter(username="testuser").exists():
         User.objects.create_user(
@@ -45,6 +47,7 @@ def login_user(request):
             return HttpResponse("Invalid credentials")
     template_name = "auth_app/login.html"
     return render (request, template_name)
+
 
 def logout_user(request):
     logout(request)
