@@ -56,8 +56,10 @@
     </div>
 
     <div class="info-actions">
-      <a href="{% url 'update_url' job.id %}" class="btn-info-action btn-update">Update</a>
-      <a href="{% url 'delete_url' job.id %}" class="btn-info-action btn-delete">Delete</a>
+      {% if request.user.is_superuser %}
+        <a href="{% url 'update_url' job.pk %}" class="btn-update">Update</a>
+        <a href="{% url 'delete_url' job.pk %}" class="btn-delete">Delete</a>
+      {% endif %}
       <a href="{% url 'show_url' %}" class="btn-info-action btn-back">Back</a>
     </div>
 

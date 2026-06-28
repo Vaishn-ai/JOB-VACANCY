@@ -53,16 +53,21 @@
             <td>{{ j.application_deadline }}</td>
 
             <td><a href="{% url 'info_url' j.id %}" class="btn-action btn-info">Info</a></td>
-            <td><a href="{% url 'update_url' j.id %}" class="btn-action btn-update">Update</a></td>
-            <td><a href="{% url 'delete_url' j.id %}" class="btn-action btn-delete">Delete</a></td>
+            {% if request.user.is_superuser %}
+              <td><a href="{% url 'update_url' j.id %}" class="btn-action btn-update">Update</a></td>
+              <td><a href="{% url 'delete_url' j.id %}" class="btn-action btn-delete">Delete</a></td>
+            {% else %}
+              <td></td>
+              <td></td>
+            {% endif %}
           </tr>
-
           {% empty %}
           <tr>
-            <td colspan="7" class="no-data">No jobs found 😢</td>
+            <td colspan="7" class="no-data">No jobs found 🫥</td>
           </tr>
           {% endfor %}
         </tbody>
+        
       </table>
     </div>
 
